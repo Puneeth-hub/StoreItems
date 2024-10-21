@@ -4,7 +4,7 @@ import Form from './components/StoreForm/Store.jsx';
 
 import './App.css';
 
-const apiUrl = 'http://localhost:8000/api/store';
+const apiUrl = 'https://storeitems.onrender.com/api/store';
 
 function App() {
   const [storeItem, setStoreItem] = useState([]); 

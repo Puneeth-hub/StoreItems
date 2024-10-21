@@ -22,7 +22,7 @@ function StoreFormData() {
   const handleSubmit = async (e) => {
     e.preventDefault(); 
     try { 
-      const response = await axios.post('http://localhost:8000/api/store/item', formData);
+      const response = await axios.post('https://storeitems.onrender.com/api/store/item', formData);
       alert('Data submitted successfully!');
       console.log('Form response:', response.data);
       
