@@ -43,16 +43,20 @@ export const addItems = async (req, res) => {
 
 //selling items from store 
 export const sellItems = async(req,res)=>{
+    
     try{
+      const {stock} = req.body
       const soldItem = await Store.findById(req.params._id); 
-      if(!soldItem) return res.status(404).json({message: 'Item not found'})
+      if (!soldItem) {
+        return res.status(404).json({ message: 'Item not found' });
+      }
       
-        if(soldItem.stock > 0){
-            soldItem.stock -= 1; 
+        if(soldItem.stock >= stock){
+            soldItem.stock -= stock; 
             const itemSoldOut = await soldItem.save(); 
             res.json(itemSoldOut);
         }else{
-            res.status(400).json({ message: 'Out of stock' });
+            res.status(400).json({ message: `Insufficient stock. Only ${soldItem.stock} available.` });
         }
     }catch(error){
        res.status(500).json({message: 'Server Error', error: error.message}); 
