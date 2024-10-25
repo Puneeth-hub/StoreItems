@@ -58,7 +58,7 @@ function App() {
   return (
     <div className='container'>
       <div className='left-section'>
-        <h1 className='heading'>Store Form</h1>
+        
         <Form/>
       </div>
       

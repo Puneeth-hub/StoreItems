@@ -20,7 +20,18 @@
   .right-section {
     background-color: #ffffff;
   }
-  
+  h2{
+    color: #0056b3;
+    font-size: 25px;
+  }
+  p{
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+
+
   .heading {
     text-align: center;
     width: 100%;
