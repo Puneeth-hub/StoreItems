@@ -101,3 +101,12 @@
     background-color: #035068;
   }
   
+  .message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+    max-width: 300px;
+    word-wrap: break-word;
+    text-align: center;
+  }
+  

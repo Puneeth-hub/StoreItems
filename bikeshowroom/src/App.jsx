@@ -23,6 +23,12 @@ function App() {
 
   //sell items 
   const sellItem = async (id, stockToSell = 1) => {
+    const item = storeItem.find(item => item._id === id);
+    if (stockToSell > item.stock) {
+      setMessage(`Insufficient stock! Available stock is ${item.stock}, but you entered ${stockToSell}.`);
+      return;
+    }
+
     try {
       const response = await axios.put(`${apiUrl}/sell/${id}`, { stock: stockToSell });
       const updateData = await axios.get(apiUrl);
@@ -78,6 +84,7 @@ function App() {
           onChange={(e) => setFilterText(e.target.value)} 
           placeholder='Enter stock'
         />
+        {message && <p className="message">{message}</p>} 
         <div className='item-container'>
             {filterItems.length > 0 ? (
               filterItems.map((item) => (
