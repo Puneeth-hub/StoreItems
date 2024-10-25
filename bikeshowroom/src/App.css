@@ -5,6 +5,7 @@
     width: 100%;
     min-height: 100vh;
     padding: 20px;
+    
   }
   
   .left-section, .right-section {
@@ -13,14 +14,14 @@
   }
   
   .left-section {
-    background-color: #f7b5b5; 
+    background-color: #f3f1f1; 
     border-right: 2px solid #ccc; 
   }
   
   .right-section {
-    background-color: #f5b9b9;
+    background-color: #f1f0f0;
   }
-  
+
   h2{
     color: #0056b3;
     font-size: 25px;
