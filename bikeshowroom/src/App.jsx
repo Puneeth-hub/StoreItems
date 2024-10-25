@@ -63,7 +63,7 @@ function App() {
       </div>
       
       <div className='right-section'>
-        <h1 className='heading'>Auto mobile</h1>
+      <h1 className='heading'>AUTO MOBILE STORE</h1>
         <input 
           type='text' 
           className='inputelment' 

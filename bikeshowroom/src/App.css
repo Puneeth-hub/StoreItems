@@ -35,6 +35,8 @@
   .heading {
     text-align: center;
     width: 100%;
+    color: #0056b3; 
+    font-size: 25px;
   }
   
   .item-container {
@@ -85,8 +87,8 @@
   }
   
   form button {
-    background-color: #e1eee4;
-    color: rgb(7, 3, 3);
+    background-color: #000702;
+    color: rgb(252, 181, 181);
     border: none;
     padding: 10px;
     border-radius: 4px;
@@ -94,6 +96,6 @@
   }
   
   form button:hover {
-    background-color: #90b397;
+    background-color: #035068;
   }
   
